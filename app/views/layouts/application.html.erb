@@ -17,7 +17,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <ul class="navbar-nav col-7">
+      <ul class="navbar-nav col-5">
         <li class="nav-item active active">
           <%  if current_user && !(admin_user?) %>
             <a class="nav-link" href="<%= dashboard_path %>"><%= "Logged in as #{current_user.first_name.titleize}" %></a>
@@ -56,7 +56,7 @@
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav col-1">
+      <ul class="navbar-nav col-2">
         <li class="nav-item active active">
           <%= link_to "Cart Count: #{@cart.total_count}", cart_path, class: 'nav-link' if @cart.total_count > 0 %>
         </li>

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:notice] = "Invalid input. Please try again."
-      render :new
+      render  :new
     end
   end
 
